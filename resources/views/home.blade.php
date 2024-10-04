@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss
-	xmlns:wsj="http://dowjones.net/rss/"
-	xmlns:dj="http://dowjones.net/rss/"
+	xmlns:wsj="https://ticker.prov1022.com"
+	xmlns:dj="https://ticker.prov1022.com"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
 	xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 	<channel>
@@ -29,7 +29,8 @@
 			</description>
 			<content:encoded/>
 			<pubDate>{{ $row['date'] }}</pubDate>
-			<category domain="AccessClassName"></category>
+			<category domain="AccessClassName">{{ $title }}</category>
+			<guid isPermaLink="false">PS-PRV-0000000</guid>
 			<wsj:articletype>Foreign Exchange</wsj:articletype>
 		</item>
 		@endforeach

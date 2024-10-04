@@ -28,7 +28,7 @@ class HomeController extends Controller
                 'link' => 'https://ticker.prov1022.com',
                 'description' => sprintf('Bid: %s, Ask: %s, Close %s', $row['bid'], $row['ask'], $row['close']),
                 'date' => $now,
-                'guid' => 'WP-PRV-0000000001',
+                'guid' => 'PS-PRV-000000' . rand(1000, 9999),
             ];
         }
 
