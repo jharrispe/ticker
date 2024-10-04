@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Response;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $response = Http::get('https://live-pricing.pepperstone.com/quotes?symbols=AUDUSD,XAUAUD');
+        $symbols = $request->query('symbols', 'AUDUSD,XAUAUD');
+        $response = Http::get('https://live-pricing.pepperstone.com/quotes?symbols=' . $symbols);
         if ($response->failed()) {
             $response = Response::make('', 422);
             $response->header('Content-Type', 'application/rss+xml');
@@ -23,9 +25,10 @@ class HomeController extends Controller
         foreach ($responseData as $symbol => $row) {
             $data[] = [
                 'title' => $symbol,
-                'link' => '',
+                'link' => 'https://ticker.prov1022.com',
                 'description' => sprintf('Bid: %s, Ask: %s, Close %s', $row['bid'], $row['ask'], $row['close']),
                 'date' => $now,
+                'guid' => 'WP-PRV-0000000001',
             ];
         }
 

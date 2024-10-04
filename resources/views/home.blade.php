@@ -5,20 +5,20 @@
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
 	xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 	<channel>
-		<title>WSJ.com: Markets</title>
+		<title>Pepperstone Symbols Ticker</title>
 		<link>http://online.wsj.com</link>
-		<atom:link type="application/rss+xml" rel="self" href="http://online.wsj.com"/>
-		<description>Markets</description>
+		<atom:link type="application/rss+xml" rel="self" href="https://ticker.prov1022.com"/>
+		<description>Pepperstone Symbols Ticker</description>
 		<language>en-us</language>
 		<pubDate>{{ $now }}</pubDate>
 		<lastBuildDate>{{ $now }}</lastBuildDate>
-		<copyright>Dow Jones &amp; Company, Inc.</copyright>
-		<generator>http://online.wsj.com</generator>
+		<copyright>Pepperstone Markets Limited</copyright>
+		<generator>https://ticker.prov1022.com</generator>
 		<docs>http://cyber.law.harvard.edu/rss/rss.html</docs>
 		<image>
-			<title>WSJ.com: Markets</title>
-			<link>http://online.wsj.com</link>
-			<url>http://online.wsj.com/img/wsj_sm_logo.gif</url>
+			<title>Pepperstone Symbols Ticker</title>
+			<link>https://ticker.prov1022.com</link>
+			<url>https://ticker.prov1022.com</url>
 		</image>
 		@foreach ($data as $row)
 		<item>
@@ -29,7 +29,6 @@
 			</description>
 			<content:encoded/>
 			<pubDate>{{ $row['date'] }}</pubDate>
-			<guid isPermaLink="false"></guid>
 			<category domain="AccessClassName"></category>
 			<wsj:articletype>Foreign Exchange</wsj:articletype>
 		</item>
