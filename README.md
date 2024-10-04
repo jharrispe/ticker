@@ -1,6 +1,6 @@
 ## Pepperstone RSS Ticker
 
-RSS feed is derived from https://live-pricing.pepperstone.com/quotes
+Based on the screenshot, I copied the RSS feed and adapted it to take live RSS feed from https://live-pricing.pepperstone.com/quotes.
 
 # Parameters
 
