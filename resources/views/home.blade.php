@@ -29,8 +29,8 @@
 			</description>
 			<content:encoded/>
 			<pubDate>{{ $row['date'] }}</pubDate>
-			<category domain="AccessClassName">{{ $title }}</category>
-			<guid isPermaLink="false">PS-PRV-0000000</guid>
+			<category domain="AccessClassName">{{ $row['title'] }}</category>
+			<guid isPermaLink="false">{{ $row['guid'] }}</guid>
 			<wsj:articletype>Foreign Exchange</wsj:articletype>
 		</item>
 		@endforeach
